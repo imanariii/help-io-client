@@ -5,4 +5,3 @@ export {default as PostItem} from './PostItem';
 export {default as List} from './List';
 export {default as AuthorItem} from './AuthorItem';
 export {default as CommentItem} from './CommentItem';
-export {default as PostModal} from './PostModal';

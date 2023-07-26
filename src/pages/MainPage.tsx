@@ -1,32 +1,17 @@
 import {Header, NavigationPanel} from "../components";
-import React, {useEffect, useState} from "react";
-import {Outlet, useLocation} from "react-router-dom";
+import React, { useState} from "react";
+import {Outlet} from "react-router-dom";
 
 const styleBody = {
-    background: '#868686',
+    // background: 'rgb(2,0,36)',
+    background: 'linear-gradient(0deg, rgba(52,52,52,1) 0%, rgba(36,103,109,1) 48%, rgba(0,222,242,1) 100%)',
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
     minHeight: '90vh'
 }
 
 const MainPage = () => {
     const [activeCategory, setActiveCategory] = useState(0)
-    document.title = "Главная страница"
-    const {pathname} = useLocation();
-    useEffect(()=>{
-        switch (pathname.substr(0, 4)) {
-            case '/dev':
-                setActiveCategory(1)
-                break;
-            case '/des':
-                setActiveCategory(2)
-                break;
-            case '/man':
-                setActiveCategory(3)
-                break;
-            default:
-                setActiveCategory(0)
-                break;
-        }
-    }, [])
     return (
         <>
             <Header />
